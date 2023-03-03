@@ -1,6 +1,6 @@
 <script setup>
 
-import {ref, computed} from "vue";
+import {ref, computed, customRef} from "vue";
 
 const questions = ref([
   {
@@ -58,6 +58,16 @@ const getCurrentQuestion = computed(() => {
 const SetAnswer = e => {
   questions.value[currentQuestion.value].selected = e.target.value
   evt.target.value = null
+}
+
+const NextQuestion = () => {
+  if (currentQuestion.value == questions.value.length -1)
+  {
+    currentQuestion.value++
+  }
+  else {
+    currentQuestion.value--
+  }
 }
 </script>
 
