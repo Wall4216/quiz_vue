@@ -1,30 +1,71 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
+import {ref, computed} from "vue";
+
+const questions = ref([
+  {
+    question: 'VUE JS',
+    answer: 0,
+    options: [
+      'Верония это?',
+      'web apps',
+      'mobile apps',
+    ],
+    selected: null
+  },
+  {
+    question: 'VUE JS',
+    answer: 2,
+    options: [
+      'Это она',
+      'web apps',
+      'mobile apps',
+    ],
+    selected: null
+  },
+  {
+    question: 'VUE JS',
+    answer: 1,
+    options: [
+      'WTF',
+      'web apps',
+      'mobile apps',
+      'quizzes'
+    ],
+    selected: null
+  }
+  ])
+
+const quizCompleted = ref(false)
+const currentQuestion = ref(0)
+const score = computed(() => {
+  let value = 0;
+  questions.value.map(q => {
+    if (q.selected == q.answer)
+    {
+      value++;
+    }
+  })
+  return value
+})
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <h1>hello world</h1>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif ;
+
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+body {
+  background-color:  black;
+  color: white;
 }
 </style>
