@@ -49,6 +49,16 @@ const score = computed(() => {
   return value
 })
 
+const getCurrentQuestion = computed(() => {
+  let question = questions.value[currentQuestion.value]
+  question.index = currentQuestion.value
+  return question
+})
+
+const SetAnswer = e => {
+  questions.value[currentQuestion.value].selected = e.target.value
+  evt.target.value = null
+}
 </script>
 
 <template>
