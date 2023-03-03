@@ -4,33 +4,33 @@ import {ref, computed, customRef} from "vue";
 
 const questions = ref([
   {
-    question: 'VUE JS',
-    answer: 0,
-    options: [
-      'Верония это?',
-      'web apps',
-      'mobile apps',
-    ],
-    selected: null
-  },
-  {
-    question: 'VUE JS',
-    answer: 2,
-    options: [
-      'Это она',
-      'web apps',
-      'mobile apps',
-    ],
-    selected: null
-  },
-  {
-    question: 'VUE JS',
+    question: 'Верония это?',
     answer: 1,
     options: [
-      'WTF',
-      'web apps',
-      'mobile apps',
-      'quizzes'
+      'Женщина',
+      'Девушка',
+      'Мобильное устройство',
+    ],
+    selected: null
+  },
+  {
+    question: 'Аскар Эдуардович',
+    answer: 2,
+    options: [
+      'Аскар',
+      'Эдуардович',
+      'Крут',
+    ],
+    selected: null
+  },
+  {
+    question: 'Щас час ночи',
+    answer: 1,
+    options: [
+      'Правда',
+      'Нет',
+      'Да',
+      'Капец'
     ],
     selected: null
   }
