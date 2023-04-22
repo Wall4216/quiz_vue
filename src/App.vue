@@ -21,11 +21,23 @@ const questions = ref([
       'Эдуардович',
       'Крут',
     ],
+
     selected: null
   },
   {
     question: 'Щас час ночи',
     answer: 1,
+    options: [
+      'Правда',
+      'Нет',
+      'Да',
+      'Капец'
+    ],
+    selected: null
+  }, 
+{
+    question: 'Щас час ночи',
+    answer: 4,
     options: [
       'Правда',
       'Нет',
